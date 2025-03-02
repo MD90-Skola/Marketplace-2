@@ -3,26 +3,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const tableBody = document.querySelector("tbody");
   
     form.addEventListener("submit", function (event) {
-      event.preventDefault(); // Förhindra standardformulärinlämning
+      event.preventDefault(); // Förhindra att sidan laddas om vid submit
   
       // Hämta värden från formuläret
       const namn = document.getElementById("fn").value;
       const yrke = document.getElementById("ln").value;
       const email = document.getElementById("email").value;
-      const produkt = document.getElementById("course").value;
-      const betalMetod = document.querySelector(
-        'select[name="course"]:nth-of-type(2)'
-      ).value;
+      const paket = document.getElementById("course").value;
+      const betalMetod = document.querySelectorAll('select[name="course"]')[1].value;
       const ovrigt = document.getElementById("description").value;
   
-      // Skapa en ny tabellrad
+      // Skapa en ny rad i tabellen
       const newRow = document.createElement("tr");
   
       newRow.innerHTML = `
-        <td>${tableBody.rows.length + 1}</td>
         <td>${namn}</td>
         <td>${yrke}</td>
-        <td>${produkt}</td>
+        <td>${paket}</td>
         <td>${betalMetod}</td>
         <td>${ovrigt}</td>
         <td><button class="delete-btn">❌</button></td>
@@ -31,10 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // Lägg till raden i tabellen
       tableBody.appendChild(newRow);
   
-      // Rensa formuläret
+      // Rensa formuläret efter inmatning
       form.reset();
   
-      // Lägg till eventlistener för att ta bort raden
+      // Lägg till funktion för att ta bort rad
       newRow.querySelector(".delete-btn").addEventListener("click", function () {
         newRow.remove();
       });
