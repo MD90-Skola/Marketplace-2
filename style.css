@@ -5,7 +5,7 @@
 header {
   background-image: url("Assets/Img/home.jpg"); 
   background-size: cover; 
-  background-position: center top; 
+  background-position: calc(50% - 20px) top; /* Flytta bilden 20px åt vänster */
   background-repeat: no-repeat;
   height: 200px;
   color: rgb(255, 255, 255);
@@ -14,6 +14,9 @@ header {
   justify-content: center;
   text-align: center;
   text-shadow: 2px 2px 4px black;
+  background-attachment: fixed; /* Gör att bilden inte rör sig vid skrollning */
+
+
 }
 
 
