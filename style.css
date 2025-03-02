@@ -1,0 +1,76 @@
+/* Stil för tabellen */
+
+
+
+header {
+  background-image: url("Assets/Img/home.jpg"); /* Byt ut med din bilds filnamn */
+  background-size: cover; /* Ser tdddddddidddll dadtdddddt bidlden fyller hela headern */
+  background-position: center; /* Cendtrdedddradr bilden */
+  background-repeat: no-repeat; 
+  height: 200px; 
+  color: rgb(255, 255, 255); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 2px 2px 4px black;
+  
+
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Stil för tabellhuvudet */
+table thead {
+  background-color: #1d1b1b;
+  color: white;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Radfärger för bättre läsbarhet */
+table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+/* Hover-effekt */
+table tbody tr:hover {
+  background-color: hsl(206, 100%, 96%);
+}
+
+/* Stil för knapparna i tabellen */
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #ffa500;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
