@@ -1,12 +1,12 @@
 
-/* Stil för tabellen */
+/* Stil fÃ¶r tabellen */
 
 
 
 header {
   background-image: url("Assets/Img/home.jpg"); 
   background-size: cover; 
-  background-position: calc(50% - 20px) top; /* Flytta bilden 20px åt vänster */
+  background-position: calc(50% - 20px) top; /* Flytta bilden 20px Ã¥t vÃ¤nster */
   background-repeat: no-repeat;
   height: 200px;
   color: rgb(255, 255, 255);
@@ -15,7 +15,7 @@ header {
   justify-content: center;
   text-align: center;
   text-shadow: 2px 2px 4px black;
-  background-attachment: fixed; /* Gör att bilden inte rör sig vid skrollning */
+  background-attachment: fixed; /* GÃ¶r att bilden inte rÃ¶r sig vid skrollning */
 
 
 }
@@ -73,7 +73,7 @@ header {
 
 
 
-/* vänster boxarna */
+/* vÃ¤nster boxarna */
 
 
 
@@ -84,11 +84,11 @@ header {
 form {
   background-color: white;
   padding: 20px;
-  border-radius: 12px; /* Rundade hörn */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Skugga för svävande effekt */
+  border-radius: 12px; /* Rundade hÃ¶rn */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Skugga fÃ¶r svÃ¤vande effekt */
   width: 50%;
-  margin: 20px auto; /* Centrerar formuläret */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smidig övergång */
+  margin: 20px auto; /* Centrerar formulÃ¤ret */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smidig Ã¶vergÃ¥ng */
 }
 
 
@@ -96,7 +96,7 @@ form {
 form {
   position: relative;
   left: 00px;
-  top: -620px; /* Flyttar formuläret 10px uppåt */
+  top: -620px; /* Flyttar formulÃ¤ret 10px uppÃ¥t */
 }
 
 
@@ -109,20 +109,20 @@ form:hover {
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Starkare skugga */
 }
 
-/* Stil för navigationslänkarna */
+/* Stil fÃ¶r navigationslÃ¤nkarna */
 nav a {
   color: white;
   text-decoration: none;
   margin: 0 15px;
   padding: 10px 15px;
-  transition: 0.3s ease-in-out; /* Lägger till en mjuk övergång */
+  transition: 0.3s ease-in-out; /* LÃ¤gger till en mjuk Ã¶vergÃ¥ng */
 }
 
-/* Hover-effekt: blått sken */
+/* Hover-effekt: blÃ¥tt sken */
 nav a:hover {
-  background-color: rgba(0, 123, 255, 0.7); /* Blå bakgrund */
+  background-color: rgba(0, 123, 255, 0.7); /* BlÃ¥ bakgrund */
   border-radius: 5px; /* Rundade kanter */
-  box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.8); /* Blått sken */
+  box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.8); /* BlÃ¥tt sken */
 }
 
 
@@ -149,7 +149,7 @@ table {
   overflow: hidden;
 }
 
-/* Stil för tabellhuvudet */
+/* Stil fÃ¶r tabellhuvudet */
 table thead {
   background-color: #1d1b1b;
   color: white;
@@ -161,7 +161,7 @@ table th, table td {
   border-bottom: 1px solid #ddd;
 }
 
-/* Radfärger för bättre läsbarhet */
+/* RadfÃ¤rger fÃ¶r bÃ¤ttre lÃ¤sbarhet */
 table tbody tr:nth-child(even) {
   background-color: #f8f8f8;
 }
@@ -171,7 +171,7 @@ table tbody tr:hover {
   background-color: hsl(206, 100%, 96%);
 }
 
-/* Stil för knapparna i tabellen */
+/* Stil fÃ¶r knapparna i tabellen */
 button {
   padding: 6px 12px;
   border: none;
@@ -198,7 +198,7 @@ button:hover {
 
 
 
-/* Stil för modalens bakgrund */
+/* Stil fÃ¶r modalens bakgrund */
 #popupModal {
   position: fixed;
   left: 0;
@@ -209,21 +209,21 @@ button:hover {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent svart bakgrund */
-  z-index: 1000; /* Se till att den ligger ovanpå andra element */
-  display: none; /* Dölj detta lager tills det behövs */
+  z-index: 1000; /* Se till att den ligger ovanpÃ¥ andra element */
+  display: none; /* DÃ¶lj detta lager tills det behÃ¶vs */
 }
 
-/* Stil för modalens innehåll */
+/* Stil fÃ¶r modalens innehÃ¥ll */
 .modal-content {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px; /* Definiera en fast bredd */
-  margin: auto; /* Centrerar innehållet i flex container */
+  margin: auto; /* Centrerar innehÃ¥llet i flex container */
 }
 
-/* Om du vill att modalen ska flytta sig lite från centrum för designändamål, kan du använda denna transform */
+/* Om du vill att modalen ska flytta sig lite frÃ¥n centrum fÃ¶r designÃ¤ndamÃ¥l, kan du anvÃ¤nda denna transform */
 .modal-content {
   transform: translate(-50%, -50%);
   position: absolute;
