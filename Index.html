@@ -83,74 +83,134 @@
       <a href="#">Kontakt</a>
     </nav>
 
-    <main class="container">
-      <form>
-        <h2 id="form-title">Annons</h2>
-        <p>Fyll i formuläret för att skapa annons</p>
-        <hr />
 
-        <label for="fn"><b>Namn</b></label>
-        <input
-          type="text"
-          id="fn"
-          placeholder="tex Anders Andersson"
-          name="firstName"
-          required
-        /><br />
 
-        <label for="ln"><b>Yrke</b></label>
-        <input
-          type="text"
-          id="ln"
-          placeholder="tex Lager arbetare"
-          name="lastName"
-          required
-        /><br />
 
-        <label for="email"><b>E-Post</b></label>
-        <input
-          type="text"
-          id="email"
-          placeholder="din epost"
-          name="email"
-          required
-        /><br />
+<!-- Popup Modal för Basic -->
+<div id="popupModal" style="display:none;">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Här är din text!</p>
+  </div>
+</div>
+
+<div class="box box-basic">
+  <img id="basicImage" src="Assets/Img/basic.png" alt="Basic" style="cursor: pointer;">
+  <p>Basic</p>
+</div>
 
 
 
 
 
-        <label for="course">Paket</label>
-        <select id="course" name="course">
-          <option value="1">Basic</option>
-          <option value="2">Plus</option>
-          <option value="3">Premium</option></select
-        ><br />
 
 
 
-        <label for="course">Betal metod</label>
-        <select id="course" name="course">
-          <option value="1">Swish</option>
-          <option value="2">Klarna</option>
-  
-        ><br />
+    <div class="box box-plus">
+      <img src="Assets/Img/plus.png" alt="Plus">
+      <p>Plus</p>
+    </div>
+    <div class="box box-premium">
+      <img src="Assets/Img/premium.png" alt="Premium">
+      <p>Premium</p>
+    </div>
 
 
 
 
-        <label for="description">Subject</label>
-        <textarea
-          id="description"
-          name="description"
-          placeholder="Frågor"
-        ></textarea
-        ><br />
+    <div id="popupModal" style="display:none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Här är din text!</p>
+      </div>
+    </div>
 
-        <hr />
-        <br />
 
-        <button type="submit" class="reg-btn">skicka</button>
+
+    <script src="script.js"></script>
+
+
+
+
+
+
+          <form>
+            <h2 id="form-title">Annons</h2>
+            <p>Fyll i formuläret för att skapa annons</p>
+            <hr />
+      
+            <label for="fn"><b>Namn</b></label>
+            <input
+              type="text"
+              id="fn"
+              placeholder="tex Anders Andersson"
+              name="firstName"
+              required
+            /><br />
+      
+            <label for="ln"><b>Yrke</b></label>
+            <input
+              type="text"
+              id="ln"
+              placeholder="tex Lager arbetare"
+              name="lastName"
+              required
+            /><br />
+      
+            <label for="email"><b>E-Post</b></label>
+            <input
+              type="text"
+              id="email"
+              placeholder="din epost"
+              name="email"
+              required
+            /><br />
+      
+            <label for="course">Paket</label>
+            <select id="course" name="course">
+              <option value="1">Basic</option>
+              <option value="2">Plus</option>
+              <option value="3">Premium</option></select
+            ><br />
+    
+    
+    
+            <label for="course">Betal metod</label>
+            <select id="course" name="course">
+              <option value="1">Swish</option>
+              <option value="2">Klarna</option>
+      
+            ><br />
+
+
+
+          
+    
+    
+    
+    
+            <label for="description">Subject</label>
+            <textarea
+              id="description"
+              name="description"
+
+              placeholder="Frågor"
+            ></textarea
+            ><br />
+    
+            <hr />
+            <br />
+      
+            <button type="submit" class="reg-btn">skicka</button>
+          </form>
+        </div>
+      </main>
+
+
+
+
+
+
       </form>
 
 
@@ -200,5 +260,10 @@
 
 
     <script src="scripts.js"></script>
+
+
+
+
+
   </body>
 </html>
