@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>skapa annons</title>
+    <link rel="icon" href="Assets/Img/market.png" type="image/x-icon" />
     <style>
       /* Universal Selector */ 
       /*
@@ -86,155 +87,120 @@
 
 
 
-<!-- Popup Modal för Basic -->
-<div id="popupModal" style="display:none;">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Här är din text!</p>
-  </div>
-</div>
-
-<div class="box box-basic">
-  <img id="basicImage" src="Assets/Img/basic.png" alt="Basic" style="cursor: pointer;">
-  <p>Basic</p>
-</div>
-
-
-
-
-
-
-
-
-    <div class="box box-plus">
-      <img src="Assets/Img/plus.png" alt="Plus">
-      <p>Plus</p>
-    </div>
-    <div class="box box-premium">
-      <img src="Assets/Img/premium.png" alt="Premium">
-      <p>Premium</p>
-    </div>
-
-
-
-
-    <div id="popupModal" style="display:none;">
+    <!-- Modal för Basic -->
+    <div id="popupModal" class="popupModal" style="display:none;">
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Här är din text!</p>
+          <span class="close">&times;</span>
+          <p>Här är din text för Basic!</p>
       </div>
-    </div>
+  </div>
+
+  <!-- Modal för Plus -->
+  <div id="plusModal" class="popupModal" style="display:none;">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Här är din text för Plus!</p>
+      </div>
+  </div>
+
+  <!-- Modal för Premium -->
+  <div id="premiumModal" class="popupModal" style="display:none;">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Här är din text för Premium!</p>
+      </div>
+  </div>
+
+  <!-- Bilder och beskrivningar för varje tjänstepaket -->
+  <div class="box box-basic">
+      <img id="basicImage" src="Assets/Img/basic.png" alt="Basic" style="cursor: pointer;">
+      <p>Basic</p>
+  </div>
+
+  <div class="box box-plus">
+      <img id="plusImage" src="Assets/Img/plus.png" alt="Plus" style="cursor: pointer;">
+      <p>Plus</p>
+  </div>
+
+  <div class="box box-premium">
+      <img id="premiumImage" src="Assets/Img/premium.png" alt="Premium" style="cursor: pointer;">
+      <p>Premium</p>
+  </div>
+
+  <script src="script.js"></script>
 
 
 
-    <script src="script.js"></script>
 
 
 
 
 
 
-          <form>
-            <h2 id="form-title">Annons</h2>
-            <p>Fyll i formuläret för att skapa annons</p>
-            <hr />
-      
-            <label for="fn"><b>Namn</b></label>
-            <input
-              type="text"
-              id="fn"
-              placeholder="tex Anders Andersson"
-              name="firstName"
-              required
-            /><br />
-      
-            <label for="ln"><b>Yrke</b></label>
-            <input
-              type="text"
-              id="ln"
-              placeholder="tex Lager arbetare"
-              name="lastName"
-              required
-            /><br />
-      
-            <label for="email"><b>E-Post</b></label>
-            <input
-              type="text"
-              id="email"
-              placeholder="din epost"
-              name="email"
-              required
-            /><br />
-      
-            <label for="course">Paket</label>
-            <select id="course" name="course">
-              <option value="1">Basic</option>
-              <option value="2">Plus</option>
-              <option value="3">Premium</option></select
-            ><br />
+
+
+
+
+
+
+
+<!-- Formuläret -->
+  <form id="annonsskapare">
+    <h2>Fyll i formuläret</h2>
     
-    
-    
-            <label for="course">Betal metod</label>
-            <select id="course" name="course">
-              <option value="1">Swish</option>
-              <option value="2">Klarna</option>
-      
-            ><br />
+    <!-- 1. Namn -->
+    <label for="fn">Namn</label>
+    <input type="text" id="fn" placeholder="Exempel: Anders Andersson" />
 
+    <!-- 2. Yrke -->
+    <label for="ln">Yrke</label>
+    <input type="text" id="ln" placeholder="Exempel: Lagerarbetare" />
 
+    <!-- 3. E-post -->
+    <label for="email">E-post</label>
+    <input type="text" id="email" placeholder="Exempel: namn@mail.com" />
 
-          
-    
-    
-    
-    
-            <label for="description">Subject</label>
-            <textarea
-              id="description"
-              name="description"
+    <!-- 4. Paket -->
+    <label for="paket">Paket</label>
+    <select id="paket">
+      <option value="Basic">Basic</option>
+      <option value="Plus">Plus</option>
+      <option value="Premium">Premium</option>
+    </select>
 
-              placeholder="Frågor"
-            ></textarea
-            ><br />
-    
-            <hr />
-            <br />
-      
-            <button type="submit" class="reg-btn">skicka</button>
-          </form>
-        </div>
-      </main>
+    <!-- 5. Betalning -->
+    <label for="betalning">Betalning</label>
+    <select id="betalning">
+      <option value="klarna">Klarna</option>
+      <option value="Swish">Swish</option>
+      <option value="Överföring">Överföring</option>
+    </select>
 
+    <!-- 6. Frågor -->
+    <label for="description">Frågor / Övrigt</label>
+    <textarea id="description" placeholder="Skriv dina frågor här..."></textarea>
 
+    <button type="submit">Skicka</button>
+  </form>
 
+  <!-- Tabell för annonserna -->
+  <table class="min-tabell">
+    <thead>
+      <tr>
+        <th>Namn</th>
+        <th>Yrke</th>
+        <th>E-post</th>
+        <th>Paket</th>
+        <th>Betalning</th>
+        <th>Frågor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Nya annonser hamnar här dynamiskt -->
+    </tbody>
+  </table>
 
-
-
-      </form>
-
-
-
-
-
-      
-      <table>
-        <thead>
-          <tr>
-     
-            <th>Namn</th>
-            <th>Yrke</th>
-            <th>Paket</th>
-            <th>Betal metod</th>
-      
-            <th colspan="2">Övrig</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Nya annonser hamnar här -->
-        </tbody>
-      </table>
-
+  <script src="send.js"></script>
 
 
 
@@ -259,11 +225,14 @@
   </footer>
 
 
-    <script src="scripts.js"></script>
-
+    
+   
 
 
 
 
   </body>
+
+  
+
 </html>

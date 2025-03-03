@@ -149,27 +149,7 @@ table {
   overflow: hidden;
 }
 
-/* Stil fÃ¶r tabellhuvudet */
-table thead {
-  background-color: #1d1b1b;
-  color: white;
-}
 
-table th, table td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-/* RadfÃ¤rger fÃ¶r bÃ¤ttre lÃ¤sbarhet */
-table tbody tr:nth-child(even) {
-  background-color: #f8f8f8;
-}
-
-/* Hover-effekt */
-table tbody tr:hover {
-  background-color: hsl(206, 100%, 96%);
-}
 
 /* Stil fÃ¶r knapparna i tabellen */
 button {
@@ -229,4 +209,36 @@ button:hover {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+
+
+
+.min-tabell {
+  position: relative;    /* Gör det möjligt att flytta elementet */
+  left: px;           /* Flyttar tabellen 50px åt höger */
+  top: -450px;            /* Flyttar tabellen 20px nedåt */
+  background-color: #f5f5f5;
+}
+
+
+/* Stil fÃ¶r tabellhuvudet */
+table thead {
+  background-color: #7b7885;
+  color: white;
+}
+
+table th, table td {
+  padding: 1px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* RadfÃ¤rger fÃ¶r bÃ¤ttre lÃ¤sbarhet */
+table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+/* Hover-effekt */
+table tbody tr:hover {
+  background-color: hsl(206, 100%, 96%);
 }
